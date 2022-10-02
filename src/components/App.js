@@ -1,13 +1,25 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 
-const App = () => {
-  return (
-    <div id="main">
-       <h1 attribute="data-ns-test" value="project-name" >The Readme</h1>
-<p attribute="data-ns-test" value="project-description">This project will help to write Readme for Github Repository</p>
-    </div>
-  )
+class App extends Component {
+    constructor(props) {
+		super(props);
+	    this.state = {
+	    text: "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy",
+		    click : 0
+	    
+	    }
+	};
+
+    render() {
+    	return(
+    		<div id="main">
+				{ /* Do not remove this main div!! */ }
+	<button id="click" onClick={() => this.setState({count: this.state.count + 1 })}>Button</button>
+    <h6 id="para">{this.state.text}</h6>
+    		</div>
+    	);
+    }
 }
 
 
